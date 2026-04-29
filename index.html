@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smilez · AI x Game | 产品经理 & 开发者</title>
+    <meta name="description" content="庄炜骁 (Smilez) 的个人网站，专注 AI x Game 的三阶段探索与实践。">
+
+    <!-- Google Fonts: Inter & Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div id="app">
+        <!-- Navigation Bar -->
+        <header class="navbar glass-panel">
+            <div class="nav-container">
+                <div class="logo">Smilez<span class="text-gradient">.ai</span></div>
+                <nav class="nav-links">
+                    <a href="#manifesto">三阶段演进</a>
+                    <a href="#projects">项目实践</a>
+                    <a href="#connect">认知与连接</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero container"
+                style="display: flex; justify-content: space-between; align-items: center; gap: 4rem;">
+                <div class="hero-content" style="flex: 1; z-index: 2;">
+                    <div class="hero-badge mono">产品经理 & AI游戏开发者</div>
+                    <h1 class="hero-title">
+                        Building the <span class="text-gradient">Next Generation</span> of Games with AI
+                    </h1>
+                    <p class="hero-subtitle">
+                        我把 AI x 游戏的发展看作三个阶段的逐步演进，每个阶段都有自己的发展过程和机会窗口。<br>
+                        这不是预测，而是正在发生的事，未来已来。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">探索我的项目</a>
+                        <a href="#manifesto" class="btn btn-secondary">了解三阶段框架</a>
+                    </div>
+                </div>
+
+                <!-- Zen Cyber Decorative Visual (Three.js Container) -->
+                <div class="hero-visual" id="hero-canvas-container">
+                </div>
+            </section>
+
+            <!-- Manifesto Section -->
+            <section id="manifesto" class="section container">
+                <div class="section-header">
+                    <h2 class="section-title">The Three Stages of <span class="text-gradient">AI x Game</span></h2>
+                    <p class="section-subtitle">从生产工具到世界本身的演进路径</p>
+                </div>
+
+                <!-- Stage 1 Deep Dive -->
+                <div class="stage-deepdive" style="margin-bottom: 5rem;">
+                    <div class="stage-content-wrapper" style="display: flex; gap: 4rem; align-items: center;">
+
+                        <!-- Left Column: Double-sided Timeline (Background) -->
+                        <div class="stage-left" style="flex: 1.8;">
+                            <div class="timeline centered" style="margin-top: 2rem;">
+                                <!-- Timeline Headers -->
+                                <div class="timeline-headers"
+                                    style="display: flex; justify-content: space-between; margin-bottom: 4rem; position: relative; z-index: 2;">
+                                    <div
+                                        style="width: 45%; text-align: right; padding-right: 3rem; color: var(--accent-cyan); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; opacity: 0.9;">
+                                        对游戏行业的改变</div>
+                                    <div
+                                        style="width: 45%; text-align: left; padding-left: 3rem; color: var(--accent-cyan); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; opacity: 0.9;">
+                                        AI技术演进里程碑</div>
+                                </div>
+
+                                <!-- Step 1 -->
+                                <div class="timeline-item centered">
+                                    <div class="timeline-industry">
+                                        <p>美术效率得到大幅提升，且门槛大幅降低</p>
+                                        <p class="text-tertiary"
+                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">
+                                            提高原有游戏生产管线环节效率</p>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-event">
+                                        <h4>① 图像生成成熟</h4>
+                                        <p class="mono text-tertiary"
+                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">Midjourney / Stable
+                                            Diffusion</p>
+                                        <p>任何人通过自然语言产出高质量图片</p>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2 -->
+                                <div class="timeline-item centered">
+                                    <div class="timeline-industry">
+                                        <p>智能普及，催生角色对话与文字游戏品类</p>
+                                        <p class="text-tertiary"
+                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">AI开始影响局部游戏玩法
+                                        </p>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-event">
+                                        <h4>② 大语言模型出世</h4>
+                                        <p class="mono text-tertiary"
+                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">ChatGPT / DeepSeek
+                                        </p>
+                                        <p>真正的智能开始普及，chat类产品火爆</p>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3 -->
+                                <div class="timeline-item centered">
+                                    <div class="timeline-industry">
+                                        <p>BGM 与音效制作平民化</p>
+                                        <p class="text-tertiary"
+                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">提高原有游戏生产管线环节效率
+                                        </p>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-event">
+                                        <h4>③ 音频生成成熟</h4>
+                                        <p class="mono text-tertiary"
+                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">Suno / ElevenLabs
+                                        </p>
+                                        <p>任何人通过自然语言产出 BGM 与音效</p>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4 -->
+                                <div class="timeline-item centered">
+                                    <div class="timeline-industry">
+                                        <p>代码门槛消失，非技术背景也能驱动程序</p>
+                                        <p class="text-tertiary"
+                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">部分原生AI游戏出现
+                                        </p>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-event">
+                                        <h4>④ 编程能力跨过门槛</h4>
+                                        <p class="mono text-tertiary"
+                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">Claude Code / Cursor</p>
+                                        <p>普通人也能让开发应用程序</p>
+                                    </div>
+                                </div>
+
+                                <!-- Step 5 -->
+                                <div class="timeline-item centered highlight-item">
+                                    <div class="timeline-industry">
+                                        <p>AI开始拥有审美，实现All-in-Code闭环</p>
+                                        <p class="text-tertiary"
+                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">普通人也可以做出精美游戏
+                                        </p>
+                                    </div>
+                                    <div class="timeline-marker pulse"></div>
+                                    <div class="timeline-event">
+                                        <h4 class="text-gradient" style="font-size: 1.3rem;">⑤LLM 拥有审美</h4>
+                                        <p class="mono text-tertiary"
+                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">Gemini 3 Pro / Nano
+                                            Banana</p>
+                                        <p>AI开始具备审美和极强的多模态理解能力</p>
+                                    </div>
+                                </div>
+
+                                <!-- Step 6 -->
+                                <div class="timeline-item centered highlight-item">
+                                    <div class="timeline-industry">
+                                        <p>经验封装为产品，小白可交付专业级游戏</p>
+                                        <p class="text-tertiary"
+                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">人人都是游戏制作人
+                                        </p>
+                                    </div>
+                                    <div class="timeline-marker pulse" style="animation-delay: 1s;"></div>
+                                    <div class="timeline-event">
+                                        <h4 class="text-gradient" style="font-size: 1.3rem;">⑥Agent框架兴起</h4>
+                                        <p class="mono text-tertiary"
+                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">LangGraph / OpenClaw</p>
+                                        <p>智能体Agent诞生。<strong>标志 Stage 1 闭环。</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Content Card (Sticky) -->
+                        <div class="stage-right" style="flex: 1;">
+                            <div class="glass-panel" style="padding: 2.5rem; position: sticky; top: 120px;">
+                                <div class="stage-header" style="margin-bottom: 1.5rem;">
+                                    <span class="stage-num mono">Stage 1</span>
+                                    <span class="stage-status status-done">已实现</span>
+                                </div>
+                                <h3 class="stage-title text-gradient" style="font-size: 2rem; margin-bottom: 1.25rem;">
+                                    AI 作为生产工具</h3>
+
+                                <p class="stage-desc"
+                                    style="font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-primary);">
+                                    <strong>AI从游戏工序提效，演进为完整生产力工具</strong><br>
+                                    <span style="display: block; margin-top: 0.5rem; color: var(--text-secondary);">普通人
+                                        × AI 就可以做出专业级游戏。技术临界点已到，"普通人独立做出 3D 游戏"不再是想象，而是可执行路径。</span>
+                                </p>
+
+                                <div style="margin-bottom: 2rem;">
+                                    <p style="color: var(--text-secondary); margin-bottom: 0.75rem; font-size: 0.9rem;">
+                                        团队规模极限压缩：</p>
+                                    <div class="mono text-tertiary"
+                                        style="padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 12px; font-size: 0.85rem; line-height: 1.6;">
+                                        整支团队 <span style="opacity: 0.3;">→</span> AI辅助 <span
+                                            style="opacity: 0.3;">→</span> 一个人 + Agent
+                                    </div>
+                                </div>
+
+                                <div class="stage-insight"
+                                    style="padding: 1.5rem; background: rgba(0, 240, 255, 0.05); border-radius: 12px; border-left: 4px solid var(--accent-color);">
+                                    <h4 style="margin-bottom: 0.75rem; color: var(--accent-color); font-size: 1.1rem;">
+                                        核心洞察</h4>
+                                    <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.25rem;">当 AI
+                                        可以端到端做游戏时，人不再是"流水线上的工种"，而是<strong>"为 AI 设计跑道的架构师"</strong>。</p>
+                                </div>
+
+                                <!-- Project Shortcuts -->
+                                <div style="margin-top: 2rem;">
+                                    <p
+                                        style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
+                                        本人独立游戏案例 / Case Study</p>
+
+                                    <!-- Project Shortcut 1 -->
+                                    <div class="glass-panel"
+                                        style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; background: rgba(255,255,255,0.02);">
+                                        <div>
+                                            <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">孤岛守护
+                                            </h4>
+                                            <p
+                                                style="margin: 0.2rem 0 0 0; font-size: 0.75rem; color: var(--text-tertiary);">
+                                                个人项目 · 独立完成 · 3D</p>
+                                        </div>
+                                        <a href="#project-gu-dao-deep-dive" class="btn-detail">查看详情</a>
+                                    </div>
+
+                                    <!-- Project Shortcut 2 -->
+                                    <div class="glass-panel"
+                                        style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02);">
+                                        <div>
+                                            <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">
+                                                末日狂飙：刀锋行者</h4>
+                                            <p
+                                                style="margin: 0.2rem 0 0 0; font-size: 0.75rem; color: var(--text-tertiary);">
+                                                个人项目 · 独立完成 · 2D</p>
+                                        </div>
+                                        <a href="#project-blade-walker-deep-dive" class="btn-detail">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 Deep Dive -->
+                <!-- Stage 2 Deep Dive -->
+                <div class="stage-deepdive"
+                    style="margin-top: 8rem; margin-bottom: 8rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+
+                    <!-- Unified Header -->
+                    <div style="margin-bottom: 4rem; max-width: 800px;">
+                        <div class="stage-header"
+                            style="margin-bottom: 1.5rem; justify-content: flex-start; gap: 1rem;">
+                            <span class="stage-num mono" style="font-size: 1rem; color: var(--text-secondary);">Stage
+                                2</span>
+                            <span class="stage-status status-progress"
+                                style="padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem;">进行中</span>
+                        </div>
+                        <h3 class="stage-title text-gradient" style="font-size: 2rem; margin-bottom: 1.25rem;">
+                            AI 作为游戏的主要玩法</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1rem; line-height: 1.6;">
+                            AI 不再是提升效率的辅助，而是游戏体验的核心。<br>核心判别标准：<strong>把 AI 抽走，游戏还存不存在？</strong></p>
+                    </div>
+
+                    <!-- Unified Exploration Matrix -->
+                    <div class="exploration-matrix">
+                        <!-- Item 1: Text Chat -->
+                        <div class="matrix-card glass-panel" style="grid-column: span 2;">
+                            <span class="card-tag tag-industry">最早跑通</span>
+                            <h4 class="matrix-card-title">文字聊天与对话类</h4>
+                            <p class="matrix-card-desc">海龟汤、开放剧情推理、剧情向文字游戏等。玩法本身就是"和 AI 说话"。这是 Stage 2
+                                中最早被玩家接受、也是目前应用最成熟的商业化方向。</p>
+                            <div class="matrix-card-footer">
+                                <span>LLM / Prompt Engineering</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Companion (Personal) -->
+                        <div class="matrix-card personal glass-panel">
+                            <span class="card-tag tag-yellow-theme">合作开发</span>
+                            <h4 class="matrix-card-title">情感陪伴AI游戏</h4>
+                            <p class="matrix-card-desc">基于大模型与极低延迟 TTS 构建的高实时交互。AI 能感知玩家行为并提供近乎真人的情绪陪伴价值。</p>
+                            <div class="matrix-card-footer">
+                                <span>LLM + TTS</span>
+                                <a href="#project-companion-ai-deep-dive" class="btn-detail">查看详情</a>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Interactive Video -->
+                        <div class="matrix-card glass-panel">
+                            <span class="card-tag tag-industry">落地中</span>
+                            <h4 class="matrix-card-title">互动影游 AI 补全</h4>
+                            <p class="matrix-card-desc">旨在替代高成本真人拍摄。通过 AI 预生成逻辑复杂的剧情分支与视频画面，让规模化制作高自由度互动影游成为可能。</p>
+                            <div class="matrix-card-footer">
+                                <span>Image2Video / Seedance</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: AI Apartment (Personal) -->
+                        <div class="matrix-card personal glass-panel" style="grid-column: span 2;">
+                            <span class="card-tag tag-yellow-theme">合作开发</span>
+                            <h4 class="matrix-card-title">AI 公寓 / 智能体行为自治</h4>
+                            <p class="matrix-card-desc">引入斯坦福小镇（Stanford Smallville）理念，赋予 NPC 完全的自主行为能力与记忆链。玩家与 NPC、NPC
+                                之间皆可自由涌现交互。AI 的智能表现直接决定了游戏的核心趣味性。</p>
+                            <div class="matrix-card-footer">
+                                <span>Agent Architecture / Memory</span>
+                                <a href="javascript:void(0)" class="btn-detail"
+                                    style="opacity: 0.5; cursor: default; pointer-events: none;">敬请期待</a>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Real-time stream -->
+                        <div class="matrix-card glass-panel">
+                            <span class="card-tag tag-industry">成本高</span>
+                            <h4 class="matrix-card-title">实时视频流互动</h4>
+                            <p class="matrix-card-desc">游戏画面不再是预制资产，而是被玩家语言指令实时影响的视频流（如 Happy Horse）。彻底重构游戏呈现形式。</p>
+                            <div class="matrix-card-footer">
+                                <span>Realtime GenAI</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 6: Bottlenecks -->
+                        <div class="matrix-card glitch-card">
+                            <span class="card-tag tag-bottleneck">真实卡点</span>
+                            <h4 class="matrix-card-title" style="color: #ffb800;">商业化落地阻碍</h4>
+                            <p class="matrix-card-desc" style="color: rgba(255, 255, 255, 0.7);">
+                                行业目前缺乏成熟的 AI 原生设计方法论。高频交互带来的 Token 成本居高不下，以及 TTS 等模态的延迟依然是硬伤。
+                            </p>
+                            <div class="matrix-card-footer">
+                                <span style="color: #ffb800; opacity: 0.8;">// End of Log</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 7: Uncharted -->
+                        <div class="matrix-card uncharted">
+                            <div>
+                                <h4 style="color: rgba(255,255,255,0.8); margin-bottom: 0.5rem; letter-spacing: 2px;">+
+                                    MORE</h4>
+                                <p
+                                    style="color: rgba(255,255,255,0.4); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;">
+                                    Uncharted Territories...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3 Deep Dive -->
+                <div class="stage-deepdive"
+                    style="margin-top: 8rem; margin-bottom: 8rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+
+                    <!-- Unified Header -->
+                    <div style="margin-bottom: 4rem; max-width: 800px;">
+                        <div class="stage-header"
+                            style="margin-bottom: 1.5rem; justify-content: flex-start; gap: 1rem;">
+                            <span class="stage-num mono" style="font-size: 1rem; color: var(--text-secondary);">Stage
+                                3</span>
+                            <span class="stage-status status-explore"
+                                style="padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem;">探索中</span>
+                        </div>
+                        <h3 class="stage-title text-gradient" style="font-size: 2rem; margin-bottom: 1.25rem;">
+                            AI 构成游戏世界本身</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1rem; line-height: 1.6;">
+                            3D 世界底座 + AI UGC + Agent角色,探索 AIx游戏 的终极形态。<br>世界、角色、玩法由自然语言生成，角色有记忆、有目标，成为"真生命"。</p>
+                    </div>
+
+                    <!-- The Trinity of Stage 3 -->
+                    <div class="trinity-container">
+                        <!-- Element 1 -->
+                        <div class="trinity-node glass-panel">
+                            <div class="trinity-icon-wrapper">
+                                🌍
+                            </div>
+                            <h4 class="trinity-title">游戏世界底座</h4>
+                            <p class="trinity-desc">为 AI 生成的内容、Agent 的行为提供运行的"地基"。必须能被随时改动、扩展、重塑，而非预制不变。</p>
+                        </div>
+                        <!-- Element 2 -->
+                        <div class="trinity-node glass-panel">
+                            <div class="trinity-icon-wrapper">
+                                🪄
+                            </div>
+                            <h4 class="trinity-title">AI UGC</h4>
+                            <p class="trinity-desc">创作门槛归零。每一个用户都可以用自然语言，随心所欲地创造自己的角色、世界与游戏规则。</p>
+                        </div>
+                        <!-- Element 3 -->
+                        <div class="trinity-node glass-panel">
+                            <div class="trinity-icon-wrapper">
+                                🤖
+                            </div>
+                            <h4 class="trinity-title">人与 Agent 共存</h4>
+                            <p class="trinity-desc">NPC 成为接入 Agent 的"真生命"。拥有记忆、目标，能与玩家及环境自由涌现出真实的行为与故事。</p>
+                        </div>
+                    </div>
+
+                    <!-- Exploration Lab Grid -->
+                    <div style="margin-top: 6rem; margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">探索记录</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Stage 3 还没成立，但我和伙伴们正在用行动让它一步一步成为现实
+                        </p>
+                    </div>
+
+                    <div class="lab-grid">
+                        <!-- Lab Card 1 -->
+                        <div class="lab-card glass-panel">
+                            <div class="video-placeholder paused">
+                                <video src="stage3-角色、技能生成.mp4" loop playsinline></video>
+                                <div class="video-controls">
+                                    <div class="play-pause-btn">
+                                        <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor" style="display: none;">
+                                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lab-card-content">
+                                <div class="lab-direction-meta">探索 1 · AI UGC</div>
+                                <h4 class="lab-card-title">角色、动画、技能生成</h4>
+                                <p class="lab-card-desc">创作"谁"：探索通过自然语言及 AI 算法，直接在引擎中生成具备骨骼动画与技能特效效果的可操作角色。</p>
+                            </div>
+                        </div>
+
+                        <!-- Lab Card 2 -->
+                        <div class="lab-card glass-panel">
+                            <div class="video-placeholder paused">
+                                <video src="stage3-3dgs世界生成.mov" loop playsinline></video>
+                                <div class="video-controls">
+                                    <div class="play-pause-btn">
+                                        <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor" style="display: none;">
+                                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lab-card-content">
+                                <div class="lab-direction-meta">探索 2 · 世界底座</div>
+                                <h4 class="lab-card-title">3D 高斯生成世界</h4>
+                                <p class="lab-card-desc">创作"哪儿"：利用 3D Gaussian Splatting 技术，基于文本或图像快速生成高保真、可交互的三维游戏场景。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Lab Card 3 -->
+                        <div class="lab-card glass-panel">
+                            <div class="video-placeholder paused">
+                                <video src="stage3-实时ai生成交互.mov" loop playsinline></video>
+                                <div class="video-controls">
+                                    <div class="play-pause-btn">
+                                        <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor" style="display: none;">
+                                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lab-card-content">
+                                <div class="lab-direction-meta">探索 3 · 实时交互</div>
+                                <h4 class="lab-card-title">实时 AI 生成交互（web网页探索）</h4>
+                                <p class="lab-card-desc">驱动"发生什么"：世界中的内容不是预设固定的，而是根据用户的即时输入或描述，实时发生演化与改变。</p>
+                            </div>
+                        </div>
+
+                        <!-- Lab Card 4 -->
+                        <div class="lab-card glass-panel">
+                            <div class="video-placeholder paused">
+                                <video src="agent接入游戏环境.mov" loop playsinline></video>
+                                <div class="video-controls">
+                                    <div class="play-pause-btn">
+                                        <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                        <svg class="icon-pause" viewBox="0 0 24 24" width="24" height="24"
+                                            fill="currentColor" style="display: none;">
+                                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lab-card-content">
+                                <div class="lab-direction-meta">探索 4 · 共存生态</div>
+                                <h4 class="lab-card-title">Agent 接入游戏环境</h4>
+                                <p class="lab-card-desc">赋予"生命"：让搭载大语言模型的 Agent 在生成出来的物理世界中真正"生存"，与环境和玩家产生自发互动。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section container">
+                <div class="section-header">
+                    <h2 class="section-title">Selected <span class="text-gradient">Projects</span></h2>
+                    <p class="section-subtitle">把理论变为可玩的实体。</p>
+                </div>
+
+                <!-- Project Showcase: 孤岛守护 (Full Page Immersive) -->
+                <section id="project-gu-dao-deep-dive" class="project-showcase">
+                    <div class="showcase-container">
+                        <header class="showcase-header">
+                            <div class="showcase-badge-group">
+                                <span class="highlight-badge dev-type">独立开发</span>
+                                <span class="highlight-badge">0 图片 / 0 模型 / 0 音频</span>
+                                <span class="highlight-badge">已上线微信小游戏</span>
+                                <span class="highlight-badge">腾讯文章热榜第一</span>
+                            </div>
+                            <h2 class="showcase-title">孤岛守护<br><span class="text-gradient"
+                                    style="font-size: 2.5rem;">The Island Guard</span></h2>
+                            <p class="showcase-desc">
+                                这是我证明"普通人 × AI 已经可以独立做出高完成度 3D 游戏"的第一个落地项目。
+                                主动放弃成熟引擎，让游戏的一切all in code
+                            </p>
+                        </header>
+
+                        <div class="showcase-main-grid">
+                            <div class="showcase-visuals">
+                                <div class="landscape-video-wrapper">
+                                    <div class="video-placeholder paused" style="aspect-ratio: 16/9;">
+                                        <video src="孤岛守护pc端素材.mp4" loop playsinline></video>
+                                        <div class="video-controls">
+                                            <div class="play-pause-btn">
+                                                <svg class="icon-play" viewBox="0 0 24 24" width="32" height="32"
+                                                    fill="currentColor">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                                <svg class="icon-pause" viewBox="0 0 24 24" width="32" height="32"
+                                                    fill="currentColor" style="display: none;">
+                                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mobile-video-overlay">
+                                    <div class="mobile-inner">
+                                        <div class="video-placeholder paused" style="aspect-ratio: 9/19.5;">
+                                            <video src="孤岛守护移动端素材.mp4" loop playsinline></video>
+                                            <div class="video-controls">
+                                                <div class="play-pause-btn">
+                                                    <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                                        fill="currentColor">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <aside class="highlights-side-grid">
+                                <div class="highlight-card">
+                                    <h5>工程深度 / 166 Files</h5>
+                                    <p>五层 Manager-System 架构，代码量级支撑起完整 3D 塔防逻辑。</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <h5>独创方法论</h5>
+                                    <p>设计AI-Native项目开发架构，游戏开发制作的极致效率。</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <h5>全代码合成音效</h5>
+                                    <p>Web Audio API 实时合成，支持音效随"子弹时间"同步慢放。</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <h5>三渲二风格化渲染</h5>
+                                    <p>300 行程序化描边 Shader，用算法雕刻出独特的手绘风美学。</p>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <footer class="showcase-footer">
+                            <div class="showcase-actions">
+                                <a href="https://mp.weixin.qq.com/s/t8Q3GbpKy_LckbXTF3sRDA" target="_blank"
+                                    class="btn btn-primary">阅读项目全文</a>
+                                <div class="btn btn-secondary" style="cursor: default;">微信搜索：孤岛守护</div>
+                            </div>
+                            <div class="mono" style="color: var(--text-tertiary); font-size: 0.9rem;">
+                                STAGE 1 / SELECTED CASE STUDY
+                            </div>
+                        </footer>
+                        <div class="showcase-divider"
+                            style="height: 1px; background: rgba(255,255,255,0.1); margin-top: 3rem;"></div>
+                    </div>
+                </section>
+
+                <!-- Project: Blade Walker Deep Dive -->
+                <section id="project-blade-walker-deep-dive" class="project-showcase blade-walker-theme">
+                    <div class="showcase-container">
+                        <header class="showcase-header">
+                            <div class="showcase-info">
+                                <div class="showcase-badge-group">
+                                    <span class="highlight-badge dev-type">独立开发</span>
+                                    <span class="highlight-badge">0 图片 / 0 精灵 / 0 DOM</span>
+                                    <span class="highlight-badge">NanoVG 矢量渲染</span>
+                                    <span class="highlight-badge">纯代码生成</span>
+                                </div>
+                                <h2 class="showcase-title">末日狂飙：刀锋行者<br><span class="text-gradient"
+                                        style="font-size: 2.5rem; --gradient-1: #ff4d4d; --gradient-2: #990000;">Blade
+                                        Walker</span></h2>
+                                <p class="showcase-desc">
+                                    这是我尝试的第二款纯代码生成游戏项目，通过画家算法实现2D伪3D的视觉效果，具有完整的商业闭环
+                                </p>
+                            </div>
+                        </header>
+
+                        <div class="blade-walker-content-stack">
+                            <div class="showcase-visuals triptych-visuals">
+                                <!-- Mobile 1: Meta System -->
+                                <div class="mobile-frame secondary-mobile" data-aos="fade-right">
+                                    <div class="mobile-header-label">局外系统 / Meta System</div>
+                                    <div class="mobile-inner">
+                                        <div class="video-placeholder paused" style="aspect-ratio: 9/19.5;">
+                                            <video src="刀锋行者-局外系统.mp4" loop playsinline></video>
+                                            <div class="video-controls">
+                                                <div class="play-pause-btn">
+                                                    <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                                        fill="currentColor">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile 2: Core Combat (Central) -->
+                                <div class="mobile-frame primary-mobile" data-aos="zoom-in">
+                                    <div class="mobile-header-label">核心战斗 / Core Combat</div>
+                                    <div class="mobile-inner">
+                                        <div class="video-placeholder paused" style="aspect-ratio: 9/19.5;">
+                                            <video src="刀锋行者-技能打击感.mp4" loop playsinline></video>
+                                            <div class="video-controls">
+                                                <div class="play-pause-btn">
+                                                    <svg class="icon-play" viewBox="0 0 24 24" width="32" height="32"
+                                                        fill="currentColor">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile 3: Roguelike -->
+                                <div class="mobile-frame secondary-mobile" data-aos="fade-left">
+                                    <div class="mobile-header-label">肉鸽元素 / Roguelike</div>
+                                    <div class="mobile-inner">
+                                        <div class="video-placeholder paused" style="aspect-ratio: 9/19.5;">
+                                            <video src="刀锋行者-肉鸽.mov" loop playsinline></video>
+                                            <div class="video-controls">
+                                                <div class="play-pause-btn">
+                                                    <svg class="icon-play" viewBox="0 0 24 24" width="24" height="24"
+                                                        fill="currentColor">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="highlights-bottom-grid">
+                                <div class="highlight-card">
+                                    <h5>2D伪3D</h5>
+                                    <p>通过画家算法实现2D伪3D的视觉效果</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <h5>打击感五件套</h5>
+                                    <p>顿帧 + 随机震屏 + 3D投影粒子 + 伤害数字 + 红屏。工程化手感</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <h5>极简工程纪律</h5>
+                                    <p>GC 压力降至 1/5，自研对象池模式，中低端 Android 稳 60fps</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <h5>完整商业闭环</h5>
+                                    <p>9 种天赋组合、50 级武器强化系统与广告收益模块</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="showcase-footer">
+                            <div class="mono" style="color: var(--text-tertiary); font-size: 0.9rem;">
+                                STAGE 1 / VECTOR ART CASE STUDY
+                            </div>
+                        </footer>
+                        <div class="showcase-divider"
+                            style="height: 1px; background: rgba(255,255,255,0.1); margin-top: 3rem;"></div>
+                    </div>
+                </section>
+
+                <!-- Project: Emotional AI Companion Deep Dive -->
+                <section id="project-companion-ai-deep-dive" class="project-showcase companion-ai-theme">
+                    <div class="showcase-container">
+                        <header class="showcase-header">
+                            <div class="showcase-info">
+                                <div class="showcase-badge-group">
+                                    <span class="highlight-badge dev-type">合作开发</span>
+                                    <span class="highlight-badge">多模态感知</span>
+                                    <span class="highlight-badge">全双工语音</span>
+                                    <span class="highlight-badge">情感记忆</span>
+                                    <span class="highlight-badge">实时画面理解</span>
+                                </div>
+                                <h2 class="showcase-title">实时情感陪伴游戏<br>
+                                    <span class="text-gradient"
+                                        style="font-size: 2.5rem; --gradient-1: #b052ff; --gradient-2: #00f0ff;">Companion
+                                        AI</span>
+                                </h2>
+                                <p class="showcase-desc">
+                                    突破传统 AI 交互的“对话框”限制，打造一个能听、能看、能一起玩游戏、有温度的数字化生命。
+                                    AI 不再是冷冰冰的工具，而是能够产生真实情感共鸣的旅伴。
+                                </p>
+                            </div>
+                        </header>
+
+                        <div class="showcase-main-grid" style="grid-template-columns: 1fr;">
+                            <div class="showcase-visuals">
+                                <div class="cinematic-wrapper">
+                                    <div class="video-placeholder paused" style="aspect-ratio: 16/9;">
+                                        <video src="情感陪伴AI游戏.mp4" loop playsinline></video>
+                                        <div class="video-controls">
+                                            <div class="play-pause-btn">
+                                                <svg class="icon-play" viewBox="0 0 24 24" width="48" height="48"
+                                                    fill="currentColor">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                                <svg class="icon-pause" viewBox="0 0 24 24" width="48" height="48"
+                                                    fill="currentColor" style="display: none;">
+                                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="sound-badge">
+                                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                                                <path
+                                                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                                            </svg>
+                                            含音频演示
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="showcase-footer">
+                            <div class="mono" style="color: var(--text-tertiary); font-size: 0.9rem;">
+                                STAGE 2 / EMOTIONAL AI CASE STUDY
+                            </div>
+                        </footer>
+                        <div class="showcase-divider"
+                            style="height: 1px; background: rgba(255,255,255,0.1); margin-top: 3rem;"></div>
+                    </div>
+                </section>
+                <!-- Connect Section -->
+                <section id="connect" class="section container" style="margin-bottom: 5rem;">
+                    <div class="section-header">
+                        <h2 class="section-title">认知与<span class="text-gradient">连接</span></h2>
+                        <p class="section-subtitle">持续的输入、输出，并寻找志同道合的同行者。</p>
+                    </div>
+
+                    <div class="insight-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2rem;">
+                        <!-- Community Card -->
+                        <div class="glass-panel connect-grid-card">
+                            <div class="connect-grid-content">
+                                <h3 class="stage-title" style="margin-bottom: 0.5rem;">AI 游戏制作交流群</h3>
+                                <div class="mono text-tertiary" style="margin-bottom: 1.5rem; font-size: 0.85rem;">200+
+                                    核心创作者 / 创始人</div>
+                                <p class="stage-desc">我建立并维护的一个"AI x 游戏"垂类深度交流圈层。聚集了对 AI
+                                    游戏充满热情的开发者、技术专家、游戏厂商、独立游戏人，交流最新技术、开源项目与商业机会。
+                                </p>
+                            </div>
+                            <div class="connect-grid-image is-square">
+                                <img src="游戏制作交流群.png" alt="AI 游戏制作交流群">
+                            </div>
+                        </div>
+
+                        <!-- Writing Card -->
+                        <!-- Writing Card -->
+                        <div class="glass-panel connect-grid-card">
+                            <div class="connect-grid-content">
+                                <h3 class="stage-title" style="margin-bottom: 0.5rem;">实战案例深度复盘</h3>
+                                <div class="mono text-tertiary" style="margin-bottom: 1.5rem; font-size: 0.85rem;">
+                                    登顶腾讯文章热榜第一</div>
+                                <p class="stage-desc">《一个人 + AI独立做出3D游戏的全过程》。详细复盘了从零完成开发的全过程，并提出了"为 AI
+                                    设计项目结构"的AI-native实战方法论。</p>
+                            </div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1rem; flex-shrink: 0;">
+                                <div class="connect-grid-image is-wide">
+                                    <img src="公众号文章配图.png" alt="万字深度复盘">
+                                </div>
+                                <a href="https://mp.weixin.qq.com/s/t8Q3GbpKy_LckbXTF3sRDA" target="_blank"
+                                    class="btn btn-primary"
+                                    style="font-size: 0.85rem; padding: 0.5rem 2rem; border-radius: 2rem;">阅读全文</a>
+                            </div>
+                        </div>
+
+                        <!-- Official Account Card -->
+                        <div class="glass-panel connect-grid-card">
+                            <div class="connect-grid-content">
+                                <h3 class="stage-title" style="margin-bottom: 0.5rem;">个人公众号</h3>
+                                <div class="mono text-tertiary" style="margin-bottom: 1.5rem; font-size: 0.85rem;">持续输出
+                                    AI x
+                                    游戏思考</div>
+                                <p class="stage-desc">记录关于 AI、游戏和产品的深度思考。不定期输出项目复盘、方法论沉淀与行业最前沿观察。</p>
+                            </div>
+                            <div class="connect-grid-image is-square">
+                                <img src="公众号关注二维码.jpg" alt="个人公众号二维码">
+                            </div>
+                        </div>
+
+                        <!-- Connect Card -->
+                        <div class="glass-panel connect-grid-card" style="position: relative;">
+                            <div
+                                style="position: absolute; top: -20%; right: -10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;">
+                            </div>
+                            <div class="connect-grid-content" style="position: relative; z-index: 1;">
+                                <h3 class="stage-title" style="margin-bottom: 0.5rem;">建立连接</h3>
+                                <div class="mono text-tertiary" style="margin-bottom: 1.5rem; font-size: 0.85rem;">Let's
+                                    Build the Future</div>
+                                <p class="stage-desc">
+                                    我正在寻找 <strong>AI + 游戏方向的落地项目</strong> 合作。<br>如果你也在做改变行业的事情，欢迎联系我。
+                                </p>
+                            </div>
+                            <div class="connect-grid-image is-square" style="position: relative; z-index: 1;">
+                                <img src="微信二维码.jpg" alt="微信二维码">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </main>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
