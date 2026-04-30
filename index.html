@@ -90,9 +90,8 @@
 
         <main>
             <!-- Hero Section -->
-            <section class="hero container"
-                style="display: flex; justify-content: space-between; align-items: center; gap: 4rem;">
-                <div class="hero-content" style="flex: 1; z-index: 2;">
+            <section class="hero container">
+                <div class="hero-content">
                     <div class="hero-badge mono">产品经理 & AI游戏开发者</div>
                     <h1 class="hero-title">
                         Building the <span class="text-gradient">Next Generation</span> of Games with AI
@@ -120,37 +119,27 @@
                 </div>
 
                 <!-- Stage 1 Deep Dive -->
-                <div id="stage1" class="stage-deepdive" style="margin-bottom: 5rem;">
-                    <div class="stage-content-wrapper" style="display: flex; gap: 4rem; align-items: center;">
+                    <div class="stage-content-wrapper">
 
                         <!-- Left Column: Double-sided Timeline (Background) -->
-                        <div class="stage-left" style="flex: 1.8;">
+                        <div class="stage-left">
                             <div class="timeline centered" style="margin-top: 2rem;">
                                 <!-- Timeline Headers -->
-                                <div class="timeline-headers"
-                                    style="display: flex; justify-content: space-between; margin-bottom: 4rem; position: relative; z-index: 2;">
-                                    <div
-                                        style="width: 45%; text-align: right; padding-right: 3rem; color: var(--accent-cyan); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; opacity: 0.9;">
-                                        对游戏行业的改变</div>
-                                    <div
-                                        style="width: 45%; text-align: left; padding-left: 3rem; color: var(--accent-cyan); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; opacity: 0.9;">
-                                        AI技术演进里程碑</div>
+                                <div class="timeline-headers">
+                                    <div class="header-left">对游戏行业的改变</div>
+                                    <div class="header-right">AI技术演进里程碑</div>
                                 </div>
 
                                 <!-- Step 1 -->
                                 <div class="timeline-item centered">
                                     <div class="timeline-industry">
                                         <p>美术效率得到大幅提升，且门槛大幅降低</p>
-                                        <p class="text-tertiary"
-                                            style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">
-                                            提高原有游戏生产管线环节效率</p>
+                                        <p class="industry-desc">提高原有游戏生产管线环节效率</p>
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-event">
                                         <h4>① 图像生成成熟</h4>
-                                        <p class="mono text-tertiary"
-                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">Midjourney / Stable
-                                            Diffusion</p>
+                                        <p class="event-tech">Midjourney / Stable Diffusion</p>
                                         <p>任何人通过自然语言产出高质量图片</p>
                                     </div>
                                 </div>
@@ -219,9 +208,7 @@
                                     <div class="timeline-marker pulse"></div>
                                     <div class="timeline-event">
                                         <h4 class="text-gradient" style="font-size: 1.3rem;">⑤LLM 拥有审美</h4>
-                                        <p class="mono text-tertiary"
-                                            style="margin-bottom: 0.5rem; font-size: 0.85rem;">Gemini 3 Pro / Nano
-                                            Banana</p>
+                                        <p class="event-tech">Gemini 3 Pro / Nano Banana</p>
                                         <p>AI开始具备审美和极强的多模态理解能力</p>
                                     </div>
                                 </div>
@@ -246,8 +233,8 @@
                         </div>
 
                         <!-- Right Column: Content Card (Sticky) -->
-                        <div class="stage-right" style="flex: 1;">
-                            <div class="glass-panel" style="padding: 2.5rem; position: sticky; top: 120px;">
+                        <div class="stage-right">
+                            <div class="glass-panel sticky-card">
                                 <div class="stage-header" style="margin-bottom: 1.5rem;">
                                     <span class="stage-num mono">Stage 1</span>
                                     <span class="stage-status status-done">已实现</span>
@@ -319,28 +306,22 @@
 
                 <!-- Stage 2 Deep Dive -->
                 <!-- Stage 2 Deep Dive -->
-                <div id="stage2" class="stage-deepdive"
-                    style="margin-top: 8rem; margin-bottom: 8rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                <div id="stage2" class="stage-deepdive">
 
                     <!-- Unified Header -->
-                    <div style="margin-bottom: 4rem; max-width: 800px;">
-                        <div class="stage-header"
-                            style="margin-bottom: 1.5rem; justify-content: flex-start; gap: 1rem;">
-                            <span class="stage-num mono" style="font-size: 1rem; color: var(--text-secondary);">Stage
-                                2</span>
-                            <span class="stage-status status-progress"
-                                style="padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem;">进行中</span>
+                    <div class="stage-intro">
+                        <div class="stage-header">
+                            <span class="stage-num mono">Stage 2</span>
+                            <span class="stage-status status-progress">进行中</span>
                         </div>
-                        <h3 class="stage-title text-gradient" style="font-size: 2rem; margin-bottom: 1.25rem;">
-                            AI 作为游戏的主要玩法</h3>
-                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1rem; line-height: 1.6;">
-                            AI 不再是提升效率的辅助，而是游戏体验的核心。<br>核心判别标准：<strong>把 AI 抽走，游戏还存不存在？</strong></p>
+                        <h3 class="stage-title text-gradient">AI 作为游戏的主要玩法</h3>
+                        <p class="stage-subtitle-alt">AI 不再是提升效率的辅助，而是游戏体验的核心。<br>核心判别标准：<strong>把 AI 抽走，游戏还存不存在？</strong></p>
                     </div>
 
                     <!-- Unified Exploration Matrix -->
                     <div class="exploration-matrix">
                         <!-- Item 1: Text Chat -->
-                        <div class="matrix-card glass-panel" style="grid-column: span 2;">
+                        <div class="matrix-card glass-panel matrix-item-wide">
                             <span class="card-tag tag-industry">最早跑通</span>
                             <h4 class="matrix-card-title">文字聊天与对话类</h4>
                             <p class="matrix-card-desc">海龟汤、开放剧情推理、剧情向文字游戏等。玩法本身就是"和 AI 说话"。这是 Stage 2
@@ -372,7 +353,7 @@
                         </div>
 
                         <!-- Item 4: AI Apartment (Personal) -->
-                        <div class="matrix-card personal glass-panel" style="grid-column: span 2;">
+                        <div class="matrix-card personal glass-panel matrix-item-wide">
                             <span class="card-tag tag-yellow-theme">合作开发</span>
                             <h4 class="matrix-card-title">AI 公寓 / 智能体行为自治</h4>
                             <p class="matrix-card-desc">引入斯坦福小镇（Stanford Smallville）理念，赋予 NPC 完全的自主行为能力与记忆链。玩家与 NPC、NPC
@@ -420,22 +401,16 @@
                 </div>
 
                 <!-- Stage 3 Deep Dive -->
-                <div id="stage3" class="stage-deepdive"
-                    style="margin-top: 8rem; margin-bottom: 8rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                <div id="stage3" class="stage-deepdive">
 
                     <!-- Unified Header -->
-                    <div style="margin-bottom: 4rem; max-width: 800px;">
-                        <div class="stage-header"
-                            style="margin-bottom: 1.5rem; justify-content: flex-start; gap: 1rem;">
-                            <span class="stage-num mono" style="font-size: 1rem; color: var(--text-secondary);">Stage
-                                3</span>
-                            <span class="stage-status status-explore"
-                                style="padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.8rem;">探索中</span>
+                    <div class="stage-intro">
+                        <div class="stage-header">
+                            <span class="stage-num mono">Stage 3</span>
+                            <span class="stage-status status-explore">探索中</span>
                         </div>
-                        <h3 class="stage-title text-gradient" style="font-size: 2rem; margin-bottom: 1.25rem;">
-                            AI 构成游戏世界本身</h3>
-                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1rem; line-height: 1.6;">
-                            3D 世界底座 + AI UGC + Agent角色,探索 AIx游戏 的终极形态。<br>世界、角色、玩法由自然语言生成，角色有记忆、有目标，成为"真生命"。</p>
+                        <h3 class="stage-title text-gradient">AI 构成游戏世界本身</h3>
+                        <p class="stage-subtitle-alt">3D 世界底座 + AI UGC + Agent角色,探索 AIx游戏 的终极形态。<br>世界、角色、玩法由自然语言生成，角色有记忆、有目标，成为"真生命"。</p>
                     </div>
 
                     <!-- The Trinity of Stage 3 -->
@@ -467,10 +442,9 @@
                     </div>
 
                     <!-- Exploration Lab Grid -->
-                    <div style="margin-top: 6rem; margin-bottom: 2rem;">
-                        <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">探索记录</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Stage 3 还没成立，但我和伙伴们正在用行动让它一步一步成为现实
-                        </p>
+                    <div class="lab-intro">
+                        <h3 class="lab-section-title">探索记录</h3>
+                        <p class="lab-section-subtitle">Stage 3 还没成立，但我和伙伴们正在用行动让它一步一步成为现实</p>
                     </div>
 
                     <div class="lab-grid">
@@ -840,14 +814,13 @@
                     </div>
                 </section>
                 <!-- Connect Section -->
-                <section id="connect" class="section container" style="margin-bottom: 5rem;">
+                <section id="connect" class="section container">
                     <div class="section-header">
                         <h2 class="section-title">认知与<span class="text-gradient">连接</span></h2>
                         <p class="section-subtitle">持续的输入、输出，并寻找志同道合的同行者。</p>
                     </div>
 
-                    <div class="insight-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2rem;">
+                    <div class="insight-grid">
                         <!-- Community Card -->
                         <div class="glass-panel connect-grid-card">
                             <div class="connect-grid-content">
@@ -867,20 +840,15 @@
                         <!-- Writing Card -->
                         <div class="glass-panel connect-grid-card">
                             <div class="connect-grid-content">
-                                <h3 class="stage-title" style="margin-bottom: 0.5rem;">实战案例深度复盘</h3>
-                                <div class="mono text-tertiary" style="margin-bottom: 1.5rem; font-size: 0.85rem;">
-                                    登顶腾讯文章热榜第一</div>
-                                <p class="stage-desc">《一个人 + AI独立做出3D游戏的全过程》。详细复盘了从零完成开发的全过程，并提出了"为 AI
-                                    设计项目结构"的AI-native实战方法论。</p>
+                                <h3 class="stage-title">实战案例深度复盘</h3>
+                                <div class="mono text-tertiary">登顶腾讯文章热榜第一</div>
+                                <p class="stage-desc">《一个人 + AI独立做出3D游戏的全过程》。详细复盘了从零完成开发的全过程，并提出了"为 AI 设计项目结构"的AI-native实战方法论。</p>
                             </div>
-                            <div
-                                style="display: flex; flex-direction: column; align-items: center; gap: 1rem; flex-shrink: 0;">
+                            <div class="connect-grid-actions">
                                 <div class="connect-grid-image is-wide">
                                     <img src="公众号文章配图.png" alt="万字深度复盘">
                                 </div>
-                                <a href="https://mp.weixin.qq.com/s/t8Q3GbpKy_LckbXTF3sRDA" target="_blank"
-                                    class="btn btn-primary"
-                                    style="font-size: 0.85rem; padding: 0.5rem 2rem; border-radius: 2rem;">阅读全文</a>
+                                <a href="https://mp.weixin.qq.com/s/t8Q3GbpKy_LckbXTF3sRDA" target="_blank" class="btn btn-primary btn-sm">阅读全文</a>
                             </div>
                         </div>
 
@@ -899,19 +867,14 @@
                         </div>
 
                         <!-- Connect Card -->
-                        <div class="glass-panel connect-grid-card" style="position: relative;">
-                            <div
-                                style="position: absolute; top: -20%; right: -10%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;">
+                        <div class="glass-panel connect-grid-card is-contact">
+                            <div class="connect-glow"></div>
+                            <div class="connect-grid-content">
+                                <h3 class="stage-title">建立连接</h3>
+                                <div class="mono text-tertiary">Let's Build the Future</div>
+                                <p class="stage-desc">我正在寻找 <strong>AI + 游戏方向的落地项目</strong> 合作。<br>如果你也在做改变行业的事情，欢迎联系我。</p>
                             </div>
-                            <div class="connect-grid-content" style="position: relative; z-index: 1;">
-                                <h3 class="stage-title" style="margin-bottom: 0.5rem;">建立连接</h3>
-                                <div class="mono text-tertiary" style="margin-bottom: 1.5rem; font-size: 0.85rem;">Let's
-                                    Build the Future</div>
-                                <p class="stage-desc">
-                                    我正在寻找 <strong>AI + 游戏方向的落地项目</strong> 合作。<br>如果你也在做改变行业的事情，欢迎联系我。
-                                </p>
-                            </div>
-                            <div class="connect-grid-image is-square" style="position: relative; z-index: 1;">
+                            <div class="connect-grid-image is-square">
                                 <img src="微信二维码.jpg" alt="微信二维码">
                             </div>
                         </div>
