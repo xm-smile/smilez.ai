@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollAnimations();
     initSmoothScroll();
     initThreeJSParticles();
-    initNavbarScroll();
+    initSidebarLogic();
     initVideoControls();
 });
 
@@ -451,24 +451,23 @@ function initHeroAnimations() {
     const tl = gsap.timeline();
 
     // Initial state: hide elements
-    gsap.set(".navbar", { y: -50, opacity: 0 });
+    gsap.set(".sidebar", { x: -100, opacity: 0 });
     gsap.set(".hero-badge", { y: 20, opacity: 0 });
     gsap.set(".hero-title", { y: 30, opacity: 0 });
     gsap.set(".hero-subtitle", { y: 20, opacity: 0 });
     gsap.set(".hero-actions .btn", { y: 20, opacity: 0 });
 
     // Animate in
-    tl.to(".navbar", { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.8, 
-        ease: "power3.out",
+    tl.to(".sidebar", {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power4.out",
         onComplete: () => {
-            // Clear GSAP inline styles so CSS classes like .nav-hidden can work
-            gsap.set(".navbar", { clearProps: "y,opacity" });
+            gsap.set(".sidebar", { clearProps: "x,opacity" });
         }
     })
-        .to(".hero-badge", { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, "-=0.4")
+        .to(".hero-badge", { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, "-=0.6")
         .to(".hero-title", { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }, "-=0.4")
         .to(".hero-subtitle", { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, "-=0.5")
         .to(".hero-actions .btn", { y: 0, opacity: 1, duration: 0.5, stagger: 0.15, ease: "power2.out" }, "-=0.4");
@@ -573,8 +572,9 @@ function initSmoothScroll() {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Offset for navbar
-                const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 100;
+                // Offset for mobile header (if visible) or just a small gap
+                const offset = window.innerWidth <= 1024 ? 80 : 40;
+                const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
                 window.scrollTo({
                     top: offsetTop,
@@ -585,20 +585,80 @@ function initSmoothScroll() {
     });
 }
 
-function initNavbarScroll() {
-    const navbar = document.querySelector('.navbar');
-    let lastScrollY = window.scrollY;
+function initSidebarLogic() {
+    const sidebar = document.querySelector('.sidebar');
+    const menuToggle = document.getElementById('menu-toggle');
+    const overlay = document.getElementById('sidebar-overlay');
+    const navItems = document.querySelectorAll('.nav-item');
+    const progressBar = document.querySelector('.scroll-progress-bar');
 
+    // 1. Mobile Menu Toggle
+    function toggleMenu() {
+        sidebar.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
+    }
+
+    function closeMenu() {
+        sidebar.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+    }
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
+
+    // Close sidebar when clicking a link on mobile
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 1024) {
+                closeMenu();
+            }
+        });
+    });
+
+    // 2. Scroll Progress Bar
     window.addEventListener('scroll', () => {
-        const currentScrollY = window.scrollY;
-
-        // Smart Hide Logic: Hide when scrolling down, reveal when scrolling up
-        if (currentScrollY > lastScrollY && currentScrollY > 150) {
-            navbar.classList.add('nav-hidden');
-        } else {
-            navbar.classList.remove('nav-hidden');
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if (progressBar) {
+            progressBar.style.height = scrolled + "%";
         }
+    });
 
-        lastScrollY = currentScrollY;
-    }, { passive: true });
+    // 3. Active State Tracking with ScrollTrigger
+    const sections = ['manifesto', 'projects', 'connect'];
+
+    sections.forEach(sectionId => {
+        ScrollTrigger.create({
+            trigger: `#${sectionId}`,
+            start: "top 40%",
+            end: "bottom 40%",
+            onEnter: () => updateActiveNavItem(sectionId),
+            onEnterBack: () => updateActiveNavItem(sectionId),
+        });
+    });
+
+    // Special case for Hero section (if scrolling up past manifesto)
+    ScrollTrigger.create({
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom 40%",
+        onEnterBack: () => updateActiveNavItem('hero'), // This will clear active states if desired
+    });
+
+    function updateActiveNavItem(id) {
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-section') === id) {
+                item.classList.add('active');
+            }
+        });
+    }
 }

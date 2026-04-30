@@ -143,54 +143,218 @@ h6 {
     padding: 0 2rem;
 }
 
-/* --- Navbar --- */
-.navbar {
+/* --- Sidebar Navigation (Hierarchical Silver) --- */
+.sidebar {
     position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1000px;
-    z-index: 100;
-    padding: 0.75rem 1.5rem;
-    border-radius: 100px;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    width: 120px; /* Wider to show main titles */
+    height: auto;
+    max-height: 80vh;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    border-radius: 24px;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(20, 20, 22, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
 }
 
-.navbar.nav-hidden {
-    transform: translate(-50%, -120%);
+.sidebar-top {
+    margin-bottom: 2rem;
+}
+
+.sidebar:hover {
+    width: 240px;
+    background: rgba(15, 15, 18, 0.85);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Reduced from 2rem */
+}
+
+.nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.nav-item.main-title {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-item.main-title:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.nav-item.main-title.active {
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
+    border-radius: 4px;
+    padding-left: 0.5rem;
+}
+
+.nav-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+/* Sub-links (Hidden by default) */
+.sub-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar:hover .sub-links {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 0.5rem;
+}
+
+.sub-item {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    padding: 0.2rem 0;
+}
+
+.sub-item:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Active Indicator Dot */
+.nav-item.main-title.active::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    width: 3px;
+    height: 12px;
+    background: #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+    border-radius: 10px;
+}
+
+/* Scroll Progress Bar (Right Vertical) */
+.sidebar-bottom {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.scroll-progress-bar {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #666, #fff, #666);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Mobile Header --- */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
     opacity: 0;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.menu-toggle.active span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 99;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: -0.5px;
+.sidebar-overlay.active {
+    display: block;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
+/* Mobile Layout Shifts */
+@media (min-width: 1025px) {
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
 }
 
-.nav-links a {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-}
-
-.nav-links a:hover {
-    color: var(--text-primary);
-}
 
 /* --- Hero Section --- */
 .hero {
@@ -678,8 +842,45 @@ h6 {
         grid-template-columns: 1fr !important;
     }
 
-    .nav-links {
-        display: none;
+    .sidebar {
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        top: 0;
+        right: 0;
+        left: auto;
+        bottom: 0;
+        width: 80%;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        z-index: 1000;
+        padding: 4rem 2rem;
+    }
+
+    .sidebar:hover {
+        width: 80%;
+        padding: 4rem 2rem;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .sidebar-links {
+        align-items: flex-start;
+    }
+    
+    .nav-label {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+
+    main {
+        padding-top: 60px;
     }
 
     .connect-grid-card {

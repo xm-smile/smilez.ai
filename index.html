@@ -24,17 +24,69 @@
     <div class="bg-glow-2"></div>
 
     <div id="app">
-        <!-- Navigation Bar -->
-        <header class="navbar glass-panel">
-            <div class="nav-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-top">
                 <div class="logo">Smilez<span class="text-gradient">.ai</span></div>
-                <nav class="nav-links">
-                    <a href="#manifesto">三阶段演进</a>
-                    <a href="#projects">项目实践</a>
-                    <a href="#connect">认知与连接</a>
-                </nav>
             </div>
+
+            <nav class="sidebar-links">
+                <!-- Home -->
+                <div class="nav-group" data-section="hero">
+                    <a href="#app" class="nav-item main-title active" data-section="hero">
+                        <span class="nav-label">个人主页</span>
+                    </a>
+                </div>
+
+                <!-- Group 1: Manifesto -->
+                <div class="nav-group" data-section="manifesto">
+                    <a href="#manifesto" class="nav-item main-title" data-section="manifesto">
+                        <span class="nav-label">三阶段演进</span>
+                    </a>
+                    <div class="sub-links">
+                        <a href="#stage1" class="sub-item">Stage 1: AI作为生产工具</a>
+                        <a href="#stage2" class="sub-item">Stage 2: AI作为游戏的主要玩法</a>
+                        <a href="#stage3" class="sub-item">Stage 3: AI作为游戏世界的本身</a>
+                    </div>
+                </div>
+
+                <!-- Group 2: Projects -->
+                <div class="nav-group" data-section="projects">
+                    <a href="#projects" class="nav-item main-title" data-section="projects">
+                        <span class="nav-label">项目实践</span>
+                    </a>
+                    <div class="sub-links">
+                        <a href="#project-gu-dao-deep-dive" class="sub-item">微信小游戏：孤岛守护</a>
+                        <a href="#project-blade-walker-deep-dive" class="sub-item">末路狂飙：刀锋行者</a>
+                        <a href="#project-companion-ai-deep-dive" class="sub-item">AI角色情感陪伴</a>
+                    </div>
+                </div>
+
+                <!-- Group 3: Connect -->
+                <div class="nav-group" data-section="connect">
+                    <a href="#connect" class="nav-item main-title" data-section="connect">
+                        <span class="nav-label">认知与连接</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="scroll-progress-container">
+                    <div class="scroll-progress-bar"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile Header (Visible only on mobile) -->
+        <header class="mobile-header glass-panel">
+            <div class="logo">Smilez<span class="text-gradient">.ai</span></div>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+            </button>
         </header>
+
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
         <main>
             <!-- Hero Section -->
@@ -68,7 +120,7 @@
                 </div>
 
                 <!-- Stage 1 Deep Dive -->
-                <div class="stage-deepdive" style="margin-bottom: 5rem;">
+                <div id="stage1" class="stage-deepdive" style="margin-bottom: 5rem;">
                     <div class="stage-content-wrapper" style="display: flex; gap: 4rem; align-items: center;">
 
                         <!-- Left Column: Double-sided Timeline (Background) -->
@@ -267,7 +319,7 @@
 
                 <!-- Stage 2 Deep Dive -->
                 <!-- Stage 2 Deep Dive -->
-                <div class="stage-deepdive"
+                <div id="stage2" class="stage-deepdive"
                     style="margin-top: 8rem; margin-bottom: 8rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
 
                     <!-- Unified Header -->
@@ -368,7 +420,7 @@
                 </div>
 
                 <!-- Stage 3 Deep Dive -->
-                <div class="stage-deepdive"
+                <div id="stage3" class="stage-deepdive"
                     style="margin-top: 8rem; margin-bottom: 8rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
 
                     <!-- Unified Header -->
